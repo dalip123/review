@@ -26,19 +26,10 @@
     */
 'connections' => array(
         'production' => array( 
-            'host'      => 'check.ezmart.in',
+            'host'      => '166.62.10.31',
             'username'  => 'dalip',
             'password'  => 'dannyLUCK1',
-            'key'       => 'ho5QT1HR1LC9Nc8fdu8+bxunevvNK1JIlh8nTP3s9l6Bz9hNbNZHNNap4nVpiAA1
-KefPzI3D0tkz+XgSjGq0PJ+LEbpto5ql2kv1x6cqHYMafCAAl0wOFakxeBCNhvEc
-oOVNSXHA40dKi/d6+xa+EecgotLwaish7fVq6VJQfbDS+7QfMTz3vz6UoiO8OPrw
-e6EChwH/m7e3VQt6wWGqLzK9iRt9yBxKo0NrqIfIjTUNklWJQyg2ZEtMp1YF62s8
-h+CfovMdtc+Li1WMlAkadYkIn8t7G/oDVFQteFh0SvFHkJ7K7Q294vL5g3fXoy5H
-Al1ejSFcl9t2e0SYk9bQqNPCa7ZAJBZJtKxDEGNgUwhDIpa2NK7KuItQbxLeTpHD
-rEFEdC0Zo1FY+KP3oDKmlFQ86zrhqtjHp7s+FlM1raQH/B6e4/IOkGwnnrNUak0T
-XiYyRALq6gpiEZAjbS3TL8Fqj+3qODsPpYT82s9olfd1soAd1mAc4od6Dl6JGWrG
-myqXYaqoSCvyQ+EJI4nCtwlUaolOhRCUZwcqrlyrQlkfg+LBzalfbnAOIL0bWejE
-U/t4QVre9al7dRtAosbllSdSJp+AJjRf',
+            'key'       => '/home/dalip/Downloads/dalip',
             'keyphrase' => '',
             'root'      => 'public_html/check',
         ),
