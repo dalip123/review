@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Socialite;
+use Facebook;
 
 class AuthController extends Controller
 {
@@ -76,7 +77,8 @@ class AuthController extends Controller
         $data = [
             'name' => $user->name,
             'email' => $user->email,
-            'id'=>$user->id
+            'id'=>$user->id,
+            'token'=>$user->token,
         ];
      
       dd($data);

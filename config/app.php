@@ -146,6 +146,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         'Collective\Remote\RemoteServiceProvider',
          Laravel\Socialite\SocialiteServiceProvider::class,
+          SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider::class,
         
 
     ],
@@ -197,6 +198,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'SSH' => 'Collective\Remote\RemoteFacade',
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Facebook' => SammyK\LaravelFacebookSdk\FacebookFacade::class,
 
     ],
 
