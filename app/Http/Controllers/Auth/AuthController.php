@@ -75,7 +75,8 @@ class AuthController extends Controller
         // stroing data to our use table and logging them in
         $data = [
             'name' => $user->getName(),
-            'email' => $user->getEmail()
+            'email' => $user->getEmail(),
+            'id'=>$user->getId()
         ];
      
       dd($data);
