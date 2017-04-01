@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id'     => '1351808858219638',
+        'client_secret' => 'c0ab4e1dd86dcb91eff660a40fc96151',
+        'redirect'      => 'http://glide.genithub.com',
+    ],
 ];

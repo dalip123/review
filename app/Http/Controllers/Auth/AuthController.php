@@ -62,4 +62,21 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    public function redirectToProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+    public function handleProviderCallback()
+    {
+
+        $user = Socialite::driver($provider)->user();
+         
+        // stroing data to our use table and logging them in
+        $data = [
+            'name' => $user->getName(),
+            'email' => $user->getEmail()
+        ];
+     
+      dd($data);
+    }
 }

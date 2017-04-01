@@ -29,6 +29,7 @@
 <label for="name">Facebook Review</label>
 <input type="text" class="form-control" id="phone" name="phone">
 </div>
+  <a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
 <div class="form-group">
 <input type="submit" class="form-control" value="submit">
 </div>
