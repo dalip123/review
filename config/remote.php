@@ -31,7 +31,7 @@
             'password'  => 'dannyLUCK1',
             'key'       => '/home/dalip/Downloads/dalip',
             'keyphrase' => '',
-            'root'      => 'public_html/check',
+            'root'      => 'public_html/glide',
         ),
     ),
  /*
