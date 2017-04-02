@@ -89,9 +89,8 @@ class AuthController extends Controller
     } catch (Facebook\Exceptions\FacebookSDKException $e) {
         dd($e->getMessage());
     }
-     $graphNode=$response->getGraphNode();
-     $accessToken=$graphNode->getAccessToken();
-     dd($accessToken);
+     $graphNode=$response->getAccessToken();
+     dd($graphNode);
       //dd($data);
     }
 }
