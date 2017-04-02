@@ -90,7 +90,8 @@ class AuthController extends Controller
         dd($e->getMessage());
     }
      $graphNode=$response->getGraphNode();
-     dd($graphNode['accessToken']);
+     $accessToken=$graphNode->getAccessToken();
+     dd($accessToken);
       //dd($data);
     }
 }
