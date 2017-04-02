@@ -89,8 +89,8 @@ class AuthController extends Controller
     } catch (Facebook\Exceptions\FacebookSDKException $e) {
         dd($e->getMessage());
     }
-     $graphNode=$response->getAccessToken();
-     dd($graphNode);
-      //dd($data);
+     $pageToken=$response->getAccessToken();
+      $rating = $fb->get('/genithub?fields=ratings',$pageToken);
+      dd($rating);
     }
 }
