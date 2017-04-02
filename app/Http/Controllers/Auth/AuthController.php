@@ -93,9 +93,7 @@ class AuthController extends Controller
     }
 
      $pageToken=$response->getAccessToken(); 
-
-     $fb->setDefaultAccessToken($pageToken);
-      $rating = $fb->get('/genithub?fields=ratings');
+      $rating = $fb->get('/genithub/ratings?access_token='.$pageToken);
       dd($rating);
     }
 }
