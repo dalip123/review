@@ -11,6 +11,7 @@ use Socialite;
 use Facebook;
 use App;
 
+
 class AuthController extends Controller
 {
     /*
