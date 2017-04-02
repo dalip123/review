@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Socialite;
 use Facebook;
 use App;
+use Session;
 
 
 class AuthController extends Controller
