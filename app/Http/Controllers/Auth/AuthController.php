@@ -80,9 +80,15 @@ class AuthController extends Controller
             'id'=>$user->id,
             'token'=>$user->token,
         ];
-        /*$fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
+        $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
           $fb->setDefaultAccessToken($data['token']);
-      */
-      dd($data['token']);
+           try {
+        $response = $fb->get('/genithub?fields=access_token');
+    } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        dd($e->getMessage());
+    }
+     
+     dd($response);
+      //dd($data);
     }
 }
