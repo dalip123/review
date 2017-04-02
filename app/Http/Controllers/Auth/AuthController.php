@@ -90,7 +90,8 @@ class AuthController extends Controller
         dd($e->getMessage());
     }
      $pageToken=$response->getAccessToken();
-      $rating = $fb->get('/genithub?fields=ratings',$pageToken);
+     $fb->setDefaultAccessToken($pageToken);
+      $rating = $fb->get('/genithub?fields=ratings');
       dd($rating);
     }
 }
