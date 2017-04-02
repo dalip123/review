@@ -89,8 +89,8 @@ class AuthController extends Controller
     } catch (Facebook\Exceptions\FacebookSDKException $e) {
         dd($e->getMessage());
     }
-     
-     dd($response);
+     $data1=$response->getRequest();
+     dd($data1);
       //dd($data);
     }
 }
