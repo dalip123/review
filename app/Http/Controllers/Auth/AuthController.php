@@ -69,23 +69,24 @@ class AuthController extends Controller
     }
     public function redirectToProvider()
     {
-        return Socialite::driver('facebook')->redirect();
+        $login_link = $fb
+            ->getRedirectLoginHelper()
+            ->getLoginUrl(['manage_pages']);
+      return redirect($login_link);
     }
     public function handleProviderCallback()
     {
-
-        $user = Socialite::driver('facebook')->user();
-         
-        // stroing data to our use table and logging them in
-        $data = [
-            'name' => $user->name,
-            'email' => $user->email,
-            'id'=>$user->id,
-            'token'=>$user->token,
-        ];
         $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
+      
+          try {
+        $token = $fb
+            ->getRedirectLoginHelper()
+            ->getAccessToken();
+    } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        // Failed to obtain access token
+        dd($e->getMessage());
+    }
           $fb->setDefaultAccessToken($data['token']);
-            Session::put('fb_user_access_token', (string)$data['token']);
            try {
         $response = $fb->get('/genithub?fields=access_token');
     } catch (Facebook\Exceptions\FacebookSDKException $e) {
