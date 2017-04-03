@@ -87,7 +87,7 @@ class AuthController extends Controller
         // Failed to obtain access token
         dd($e->getMessage());
     }
-          $fb->setDefaultAccessToken($data['token']);
+          $fb->setDefaultAccessToken($token);
            try {
         $response = $fb->get('/genithub?fields=access_token');
     } catch (Facebook\Exceptions\FacebookSDKException $e) {
