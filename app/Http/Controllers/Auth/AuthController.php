@@ -67,8 +67,9 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    public function redirectToProvider(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb)
+    public function redirectToProvider()
     {
+        $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
         $login_link = $fb
             ->getRedirectLoginHelper()
             ->getLoginUrl(['manage_pages']);
