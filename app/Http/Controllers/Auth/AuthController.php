@@ -72,7 +72,7 @@ class AuthController extends Controller
         $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
         $login_link = $fb
             ->getRedirectLoginHelper()
-            ->getLoginUrl(['manage_pages']);
+            ->getLoginUrl('http://glide.ezmart.in/social/login/facebook',['manage_pages']);
       return redirect($login_link);
     }
     public function handleProviderCallback()
