@@ -36,8 +36,8 @@ return [
     ],
 
     'facebook' => [
-        'client_id'     => '1351808858219638',
-        'client_secret' => 'c0ab4e1dd86dcb91eff660a40fc96151',
+        'client_id'     => '1357957584271432',
+        'client_secret' => '9562078ba28479642459af1210006564',
         'redirect'      => 'http://glide.ezmart.in/social/login/facebook',
     ],
 ];
