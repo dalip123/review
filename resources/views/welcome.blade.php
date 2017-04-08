@@ -30,6 +30,7 @@
 <input type="text" class="form-control" id="phone" name="phone">
 </div>
   <a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
+   <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
 <div class="form-group">
 <input type="submit" class="form-control" value="submit">
 </div>
