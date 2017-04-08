@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SocialReview extends Migration
+class Google extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class SocialReview extends Migration
      */
     public function up()
     {
-        
-        Schema::create('facebook', function (Blueprint $table) {
+          Schema::create('google', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('facebook_name');
+            $table->string('google_name');
             
         });
     }
@@ -27,6 +26,6 @@ class SocialReview extends Migration
      */
     public function down()
     {
-        Schema::drop('facebook');
+        Schema::drop('google');
     }
 }
