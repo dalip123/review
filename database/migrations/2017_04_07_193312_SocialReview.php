@@ -27,6 +27,6 @@ class SocialReview extends Migration
      */
     public function down()
     {
-        Schema::drop('social');
+        Schema::drop('social_id');
     }
 }
