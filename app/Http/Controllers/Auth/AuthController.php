@@ -67,35 +67,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    public function redirectToProvider()
+    public function redirectToProvider($path)
     {
-        $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
-        $login_link = $fb
-            ->getRedirectLoginHelper()
-            ->getLoginUrl('http://glide.ezmart.in/social/login/facebook',['manage_pages']);
-      return redirect($login_link);
+    return Socialite::driver($path)->redirect();    
     }
-    public function handleProviderCallback()
+    public function handleProviderCallback($path)
     {
-        $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
-      
-          try {
-        $token = $fb
-            ->getRedirectLoginHelper()
-            ->getAccessToken();
-    } catch (Facebook\Exceptions\FacebookSDKException $e) {
-        // Failed to obtain access token
-        dd($e->getMessage());
-    }
-          $fb->setDefaultAccessToken($token);
-           try {
-        $response = $fb->get('/genithub?fields=access_token');
-    } catch (Facebook\Exceptions\FacebookSDKException $e) {
-        dd($e->getMessage());
-    }
-
-     $pageToken=$response->getAccessToken(); 
-      $rating = $fb->get('/genithub/ratings?access_token='.$pageToken);
-      dd($rating);
+       $user = Socialite::driver($path)->user();
+       dd($user);
     }
 }
