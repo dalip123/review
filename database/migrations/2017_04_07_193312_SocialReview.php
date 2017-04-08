@@ -15,8 +15,8 @@ class SocialReview extends Migration
         
         Schema::create('social_id', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('facebook_id');
-            $table->string('google_id');
+            $table->string('facebook_name');
+            $table->string('google_name');
         });
     }
 
@@ -27,6 +27,6 @@ class SocialReview extends Migration
      */
     public function down()
     {
-        Schema::drop('')
+        Schema::drop('social');
     }
 }
