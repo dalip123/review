@@ -79,11 +79,11 @@ class AuthController extends Controller
        $reviewActive=false;
        if($path=='facebook')
        {
-      $namecheck=DB::table('social_id')->where('facebook_name',$name)->get(); 
+      $namecheck=DB::table('social_id')->where('facebook_name',$name)->first(); 
        }
        else
        {
-        $namecheck=DB::table('google')->where('google_name',$name)->get();
+        $namecheck=DB::table('google')->where('google_name',$name)->first();
        }
        dd($namecheck);
        if($namecheck)
