@@ -34,9 +34,7 @@
 <label for="name">Google Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
 @if(isset($reviewActive))
-@if(!$reviewActive)
- <a class="btn btn-primary" href="https://www.google.co.in/search?&q=rees52#lrd=0x390ce4986caa23df:0x7c6b1908763b647e,3,">Give Review on Google</a>
-@endif
+   <h2>{{$reviewActive}}</h2>
 @endif
 </div>
    
