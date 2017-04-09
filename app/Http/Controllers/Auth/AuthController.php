@@ -93,6 +93,7 @@ class AuthController extends Controller
     }
     public function index()
     {
-        return view('index');
+        $reviewActive=true;
+        return view('index')->with('reviewActive',$reviewActive);
     }
 }
