@@ -33,9 +33,12 @@
   <div class="form-group">
 <label for="name">Google Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
-@if(isset($reviewActive))
-   <h2>{{$reviewActive}}</h2>
-@endif
+@if(Session::has('reviewActive'))
+ <div class="row">
+  
+            <h2>{{Session::get('reviewActive')}}</h2>         
+ </div>
+ @endif
 </div>
    
 <div class="form-group">
