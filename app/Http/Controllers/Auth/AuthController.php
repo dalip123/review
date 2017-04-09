@@ -85,8 +85,8 @@ class AuthController extends Controller
        {
         $namecheck=DB::table('google')->where('google_name',$name)->first();
        }
-       dd($namecheck);
-       if($namecheck)
+       
+       if(!empty($namecheck))
        $reviewActive=true;
        
        return redirect()->back()->with('reviewActive',$reviewActive);
