@@ -19,7 +19,7 @@ if (window.location.hash == '#_=_'){
 
 }
 
-if(window.location.hash=="#")
+if(window.location.hash=='#')
 {
 	window.location.hash='';
 }
