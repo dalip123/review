@@ -21,4 +21,4 @@ Route::get('index',[
     'uses'=>'Auth\AuthController@index',
     'as'=>'index'
 	]);
-});
+
