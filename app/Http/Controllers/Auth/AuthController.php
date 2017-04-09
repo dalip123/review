@@ -73,18 +73,20 @@ class AuthController extends Controller
     }
     public function handleProviderCallback($path)
     {
-        $reviewActive=false;
+        
        $user = Socialite::driver($path)->user();
        $name= $user->getName();
+       $reviewActive=false;
        if($path=='facebook')
        {
-      $name=DB::table('social_id')->where('facebook_name',$name)->get(); 
+      $namecheck=DB::table('social_id')->where('facebook_name',$name)->get(); 
        }
        else
        {
-        $name=DB::table('google')->where('google_name',$name)->get();
+        $namecheck=DB::table('google')->where('google_name',$name)->get();
        }
-       if($name)
+       dd($namecheck);
+       if($namecheck)
        $reviewActive=true;
        
        return redirect()->back()->with('reviewActive',$reviewActive);
