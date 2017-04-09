@@ -11,7 +11,7 @@
     </head>
     <body>
 <div class="container">
-<h2>{{$reviewActive}}</h2>
+<h2> {{ session('reviewActive') }}</h2>
 </div>
     </body>
 </html>
