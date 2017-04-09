@@ -28,8 +28,10 @@
 <div class="form-group">
 <label for="name">Facebook Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
+@if(isset($reviewActive))
 @if(!$reviewActive)
  <a class="btn btn-primary" href="https://www.facebook.com/pg/Roboticsembeddededucationservicespvtltd/reviews/">Give Review on Facebook</a>
+@endif
 @endif
 </div>
   <div class="form-group">
