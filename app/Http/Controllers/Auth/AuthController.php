@@ -89,7 +89,7 @@ class AuthController extends Controller
        if(!empty($namecheck))
        $reviewActive=true;
        
-       return view('welcome');
+       return redirect('/');
        
     }
 }
