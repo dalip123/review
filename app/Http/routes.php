@@ -17,6 +17,8 @@ Route::get('/', function () {
 Route::get('deploy','ServerController@deploy');
 Route::get('social/login/redirect/{path}', ['uses' => 'Auth\AuthController@redirectToProvider', 'as' => 'social.login']);
 Route::get('social/login/{path}', 'Auth\AuthController@handleProviderCallback');
-Route::get('index', function () {
-    return view('index');
+Route::get('index',[
+    'uses'=>'Auth\AuthController@index',
+    'as'=>'index'
+	]);
 });

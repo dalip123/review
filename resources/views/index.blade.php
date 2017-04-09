@@ -12,7 +12,7 @@
     <body>
 <div class="container">
 <div class="row">
-<h2> {{ session('reviewActive') }}</h2>
+<h2> {{$reviewActive}}</h2>
 </div>
 </div>
     </body>
