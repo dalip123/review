@@ -34,10 +34,10 @@
 <label for="name">Google Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
 @if(Session::has('reviewActive'))
- <div class="row">
+ 
   
             <h2>{{Session::get('reviewActive')}}</h2>         
- </div>
+ 
  @endif
 </div>
    

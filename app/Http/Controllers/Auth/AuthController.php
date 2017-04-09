@@ -88,8 +88,8 @@ class AuthController extends Controller
        
        if(!empty($namecheck))
        $reviewActive=true;
-       Session::set('reviewActive',$reviewActive);
-       return redirect('/');
+       
+       return redirect('/')->with('reviewActive',$reviewActive);
        
     }
     public function index()
