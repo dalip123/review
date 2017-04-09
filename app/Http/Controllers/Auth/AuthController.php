@@ -11,7 +11,7 @@ use Socialite;
 use Facebook;
 use App;
 use Session;
-
+use DB;
 
 class AuthController extends Controller
 {
@@ -73,8 +73,21 @@ class AuthController extends Controller
     }
     public function handleProviderCallback($path)
     {
+        $reviewActive=false;
        $user = Socialite::driver($path)->user();
        $name= $user->getName();
-       dd($name);
+       if($path=='facebook')
+       {
+      $name=DB::table('social_id')->where('facebook_name',$name)->get(); 
+       }
+       else
+       {
+        $name=DB::table('google')->where('google_name',$name)->get();
+       }
+       if($name)
+       $reviewActive=true;
+       
+       return redirect()->back()->with('reviewActive',$reviewActive);
+       
     }
 }

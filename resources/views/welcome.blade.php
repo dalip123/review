@@ -27,12 +27,18 @@
 </div>
 <div class="form-group">
 <label for="name">Facebook Review</label>
-<input type="text" class="form-control" id="phone" name="phone">
+<a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
+@if(!$reviewActive)
+ <a class="btn btn-primary" href="https://www.facebook.com/pg/Roboticsembeddededucationservicespvtltd/reviews/">Give Review on Facebook</a>
+@endif
 </div>
-  <a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
-   <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
+  <div class="form-group">
+<label for="name">Google Review</label>
+<a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
+</div>
+   
 <div class="form-group">
-<input type="submit" class="form-control" value="submit">
+<input type="submit" class="form-control btn btn-primary" value="submit">
 </div>
 </form>
 </div>
