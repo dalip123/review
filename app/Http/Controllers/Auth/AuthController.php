@@ -89,12 +89,12 @@ class AuthController extends Controller
        if(!empty($namecheck))
        $reviewActive=true;
        
-       return redirect('/')->with('reviewActive',$reviewActive);
+       return redirect()->route('index')->with('reviewActive',$reviewActive);
        
     }
     public function index()
     {
-        $reviewActive=true;
+        
         return view('index');
     }
 }
