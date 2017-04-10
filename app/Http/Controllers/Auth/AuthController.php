@@ -77,7 +77,7 @@ class AuthController extends Controller
        $user = Socialite::driver($path)->user();
        $name= $user->getName();
        $reviewFacebook=0;
-       $reviewGoogle=0;
+       $reviewGoogle=1;
        if($path=='facebook')
        {
       $namecheck=DB::table('social_id')->where('facebook_name',$name)->first(); 
@@ -88,9 +88,9 @@ class AuthController extends Controller
        }
        
        if(!empty($namecheck)&&$path=='facebook')
-       $reviewFacebook=1;
+        $reviewFacebook=1;
        if(!empty($namecheck)&&$path=='google')
-        $reviewGoogle=1;
+        $reviewGoogle=0;
        
        return view('index')->with(['reviewFacebook'=>$reviewFacebook,'reviewGoogle'=>$reviewGoogle]);
        
