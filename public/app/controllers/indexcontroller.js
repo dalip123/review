@@ -4,7 +4,7 @@
     $scope.countGoogleLink=0;
     $scope.updateGoogleReview = function(){
     	$scope.countGoogleLink++;
-     
+       alert("hello");
     };
 
         $scope.updateFacebookReview = function(){
