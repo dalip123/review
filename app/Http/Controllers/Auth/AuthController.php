@@ -76,7 +76,7 @@ class AuthController extends Controller
         
        $user = Socialite::driver($path)->user();
        $name= $user->getName();
-       $reviewActive=false;
+       $reviewActive=0;
        if($path=='facebook')
        {
       $namecheck=DB::table('social_id')->where('facebook_name',$name)->first(); 
@@ -87,9 +87,9 @@ class AuthController extends Controller
        }
        
        if(!empty($namecheck))
-       $reviewActive=true;
+       $reviewActive=1;
        
-       return view('index')->with('reviewActive',"1");
+       return view('index')->with('reviewActive',$reviewActive);
        
     }
     public function index()
