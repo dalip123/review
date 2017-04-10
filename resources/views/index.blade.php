@@ -12,7 +12,7 @@
     <body>
 <div class="container">
 <div class="row">
-<h2>hi {{$reviewActive}}</h2>
+<h2>hi {!!$reviewActive!!}</h2>
 </div>
 </div>
     </body>
