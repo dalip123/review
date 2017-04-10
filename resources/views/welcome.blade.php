@@ -33,10 +33,10 @@
   <div class="form-group">
 <label for="name">Google Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
-@if(session('reviewActive'))
+@if(isset('reviewActive'))
  
   
-            <h2>{{session('reviewActive')}}</h2>         
+            <h2>{{$reviewActive}}</h2>         
  
  @endif
 </div>
