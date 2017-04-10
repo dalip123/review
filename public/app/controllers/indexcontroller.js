@@ -1,4 +1,4 @@
-	app.controller('admincontroller', function($scope,$http,$window) {
+app.controller('admincontroller', function($scope,$http,$window) {
     $scope.initialize=false;
     $scope.countFacebookLink=0;
     $scope.countGoogleLink=0;
