@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
   <script src="public/js/index.js"></script>
   <script src="public/app/app.js"></script>
     </head>
@@ -56,5 +56,5 @@
 </form>
 </div>
     </body>
-    <script src="public/app/controllers/indexcontroller.js"></script>
+    <script src="{{url('public/app/controllers/indexcontroller.js')}}"></script>
 </html>
