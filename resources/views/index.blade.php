@@ -11,7 +11,7 @@
   <script src="public/app/app.js"></script>
     </head>
     <body ng-app="myApp">
-<div class="container">
+<div class="container" ng-controller="indexcontroller">
 <div class="text-centre"><h2>Give us Feedback</h2></div>
 <form action="" class="form-horizontal" >
 <div class="form-group">
