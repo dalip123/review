@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
     <head>
         <title>Review</title>
@@ -11,9 +11,40 @@
     </head>
     <body>
 <div class="container">
-<div class="row">
-<h2>hi {{$reviewActive}}</h2>
+<div class="text-centre"><h2>Give us Feedback</h2></div>
+<form action="" class="form-horizontal">
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" class="form-control" id="name" name="name">
 </div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="text" class="form-control" id="email" name="email">
+</div>
+<div class="form-group">
+<label for="name">Phone No.</label>
+<input type="text" class="form-control" id="phone" name="phone">
+</div>
+<div class="form-group">
+<label for="name">Facebook Review</label>
+<a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
+
+</div>
+  <div class="form-group">
+<label for="name">Google Review</label>
+<a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
+@if(isset($reviewActive))
+ 
+  
+            <h2>{{$reviewActive}}</h2>         
+ 
+ @endif
+</div>
+   
+<div class="form-group">
+<input type="submit" class="form-control btn btn-primary" value="submit">
+</div>
+</form>
 </div>
     </body>
 </html>
