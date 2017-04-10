@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   
   <script src="public/js/index.js"></script>
-  <script src="public/app/app.js"></script>
+  <script src="{{ URL::to('/') }}/public/app/app.js"></script>
     </head>
     <body ng-app="myApp">
 <div class="container" >
