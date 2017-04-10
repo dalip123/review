@@ -28,13 +28,18 @@
 <div class="form-group">
 <label for="name">Facebook Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['facebook']) }}">Facebook</a>
-
+@if(isset($reviewFacebook))
+ @if(!$reviewFacebook)
+  
+            <a class="btn btn-primary" target="_blank" href="https://www.facebook.com/pg/Roboticsembeddededucationservicespvtltd/reviews/">Give Review at Facebook</a>         
+   @endif
+ @endif
 </div>
   <div class="form-group">
 <label for="name">Google Review</label>
 <a class="btn btn-primary" href="{{ route('social.login', ['google']) }}">Google</a>
-@if(isset($reviewActive))
- @if(!$reviewActive)
+@if(isset($reviewGoogle))
+ @if(!$reviewGoogle)
   
             <a class="btn btn-primary" target="_blank" href="https://www.google.co.in/search?q=rees52">Give Review at Google</a>         
    @endif
