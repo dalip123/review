@@ -8,14 +8,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   
   <script src="public/js/index.js"></script>
-  <script src="{{ URL::to('/') }}/public/app/app.js"></script>
+  <script>
+var app = var app = angular.module('myApp', [], function($interpolateProvider) {
+	$interpolateProvider.startSymbol('<%');
+	$interpolateProvider.endSymbol('%>');
+});
+ 
+app.controller('indexcontroller', function($scope) {
+     $scope.countFacebookLink=0;
+    $scope.countGoogleLink=0;
+    $scope.updateGoogleReview = function(){
+    	$scope.countGoogleLink++;
+       alert("hello");
+    };
+
+        $scope.updateFacebookReview = function(){
+    	alert("hello");
+        $scope.countFacebookLink++;
+    };
+});
+</script>
+  
     </head>
     <body ng-app="myApp">
 <div class="container" >
 <div class="text-centre"><h2>Give us Feedback</h2></div>
 <form action="" class="form-horizontal" ng-controller="indexcontroller">
 <div class="form-group">
-<label for="name">Name: <% countFacebookLink %></label>
+<label for="name">Name: </label>
 <input type="text" class="form-control" id="name" name="name">
 </div>
 <div class="form-group">
@@ -56,5 +76,5 @@
 </form>
 </div>
     </body>
-    <script src="{{url('public/app/controllers/indexcontroller.js')}}"></script>
+ 
 </html>
