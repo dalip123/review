@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="public/js/index.js"></script>
-  <script src="{{ URL::to('/') }}/public/app/app.js"></script>
+  <script src="public/app/app.js"></script>
     </head>
     <body ng-app="myApp">
 <div class="container">
@@ -56,5 +56,5 @@
 </form>
 </div>
     </body>
-    <script src="{{url('public/app/controllers/indexcontroller.js')}}"></script>
+    <script src="public/app/controllers/indexcontroller.js"></script>
 </html>
