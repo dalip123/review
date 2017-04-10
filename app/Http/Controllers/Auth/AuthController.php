@@ -81,34 +81,27 @@ class AuthController extends Controller
        if($path=='facebook')
        {
       $reviewFacebook=0;
+      $reviewGoogle=1;
       $namecheck=DB::table('social_id')->where('facebook_name',$name)->first(); 
        }
        else
        {
         $reviewGoogle=0;
+        $reviewFacebook=1;
         $namecheck=DB::table('google')->where('google_name',$name)->first();
        }
        
        if(!empty($namecheck)&&$path=='facebook')
         {
-          $reviewFacebook=1;
-          $reviewGoogle=1;
+          $reviewFacebook=1;          
         }
-        else
-        {
-           $reviewGoogle=1; 
-        }
+
         
        if(!empty($namecheck)&&$path=='google')
         {
           $reviewGoogle=1;
-          $reviewFacebook=1;
         }
-        else
-        {
-            $reviewFacebook=1;
-        }
-       
+        
        return view('index')->with(['reviewFacebook'=>$reviewFacebook,'reviewGoogle'=>$reviewGoogle]);
        
     }
