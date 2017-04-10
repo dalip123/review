@@ -9,7 +9,7 @@
   
   <script src="public/js/index.js"></script>
   <script>
-var app = var app = angular.module('myApp', [], function($interpolateProvider) {
+ var app = angular.module('myApp', [], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
