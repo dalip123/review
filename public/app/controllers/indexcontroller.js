@@ -8,7 +8,7 @@
     };
 
         $scope.updateFacebookReview = function(){
-    	
+    	alert("hello");
         $scope.countFacebookLink++;
     };
 
