@@ -19,11 +19,11 @@ class ServerController extends Controller
        public function submitReview(Request $request)
     {
     	$messages = [
-    'name'    => 'Name is required.',
-    'email'    => 'Email is required',
-    'phone' => 'Phone number is required.',
-    'facebook'    => 'Review us at facebook.',
-    'google'    => 'Review us at google.',
+    'name.required'    => 'Name is required.',
+    'email.required'    => 'Email is required.',
+    'phone.required' => 'Phone number is required.',
+    'facebook.required'    => 'Review us at facebook.',
+    'google.required'    => 'Review us at google.',
 ];
          $validator = Validator::make($request->all(), [
 	'name' => 'required',
