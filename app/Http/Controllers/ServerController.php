@@ -18,7 +18,7 @@ class ServerController extends Controller
 
        public function submitReview(Request $request)
     {
-    	 dd("Ok");
+
         
           $this->validate($request , [
     'name' => 'required',
@@ -26,12 +26,10 @@ class ServerController extends Controller
     'phone' => 'required',
     'package' => 'required',
     'price' => 'required',
-    'facebook'=>'required|min:1',
-    'google'=>'required|min:1'
     ]);  
         
 
-       
+       dd("ok");
         
     }
 }
