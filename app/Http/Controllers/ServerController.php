@@ -15,8 +15,8 @@ class ServerController extends Controller
         exec('cd /home/dalip/public_html/check && git pull origin master');
         dd("ok");
     }  
-    
-       public function submitReview(Reqeust $request)
+
+       public function submitReview(Request $request)
     {
         
           $this->validate($request , [
