@@ -22,3 +22,7 @@ Route::get('index',[
     'as'=>'index'
 	]);
 
+Route::post('index',[
+	'uses'=>'Auth\AuthController@submitReview',
+	'as'=>'submitReview'
+	]);
