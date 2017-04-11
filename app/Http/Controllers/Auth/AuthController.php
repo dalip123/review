@@ -15,6 +15,7 @@ use Session;
 use DB;
 
 
+
 class AuthController extends Controller
 {
     /*
@@ -112,21 +113,5 @@ class AuthController extends Controller
         
         return view('index');
     }
-    public function submitReview(Reqeust $request)
-    {
-        
-          $this->validate($request , [
-    'name' => 'required',
-    'email' => 'required',
-    'phone' => 'required',
-    'package' => 'required',
-    'price' => 'required',
-    'facebook'=>'required|min:1',
-    'google'=>'required|min:1'
-    ]);  
-        
-
-        dd("Ok");
-        
-    }
+ 
 }
