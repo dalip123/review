@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Validator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use SSH;
@@ -18,18 +18,21 @@ class ServerController extends Controller
 
        public function submitReview(Request $request)
     {
-
-        
-          $this->validate($request , [
-    'name' => 'required',
+         $validator = Validator::make($request->all(), [
+	'name' => 'required',
     'email' => 'required',
     'phone' => 'required',
     'package' => 'required',
     'price' => 'required',
-    ]);  
+]);
+        if ($validator->fails()) {
+	return redirect('index') //change this to your desired url
+		->withErrors($validator)
+		->withInput();
+}
         
 
-       dd("ok");
+       
         
     }
 }
