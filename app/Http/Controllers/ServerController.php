@@ -18,6 +18,7 @@ class ServerController extends Controller
 
        public function submitReview(Request $request)
     {
+    	 dd("Ok");
         
           $this->validate($request , [
     'name' => 'required',
@@ -30,7 +31,7 @@ class ServerController extends Controller
     ]);  
         
 
-        dd("Ok");
+       
         
     }
 }
