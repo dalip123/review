@@ -18,6 +18,7 @@ class ServerController extends Controller
 
        public function submitReview(Request $request)
     {
+
     	$messages = [
     'name.required'    => 'Name is required.',
     'email.required'    => 'Email is required.',
@@ -39,7 +40,7 @@ class ServerController extends Controller
 		->withInput();
 }
         
-
+dd("ok");
        
         
     }
