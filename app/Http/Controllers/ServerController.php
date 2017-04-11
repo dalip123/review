@@ -7,6 +7,7 @@ use Illuminate\Contracts\Validation\Validator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use SSH;
+use Validator;
 
 class ServerController extends Controller
 {
