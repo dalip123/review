@@ -77,7 +77,7 @@ class AuthController extends Controller
     public function handleProviderCallback($path)
     {
         
-       $user = Socialite::driver($path)->stateless()->user();
+       $user = Socialite::driver($path)->user();
        $name= $user->getName();
        
        
